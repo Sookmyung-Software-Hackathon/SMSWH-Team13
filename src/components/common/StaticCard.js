@@ -26,7 +26,7 @@ const StaticCard = ({ value }) => {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <ImageBackground source={{ uri: imageURI }} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={{ uri: imageURI }} resizeMode="contain" style={styles.image}>
           <Text style={styles.cardText}></Text>
         </ImageBackground>
       </View>

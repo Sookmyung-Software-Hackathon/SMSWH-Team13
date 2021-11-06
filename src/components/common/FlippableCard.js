@@ -83,7 +83,7 @@ const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
       </Animated.View>
 
       <Animated.View style={[styles.flipCard, styles.flipCardBack, popoutAnimationStyle(), backAnimatedStyle()]}>
-        <ImageBackground source={{ uri: imageURI }} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={{ uri: imageURI }} resizeMode="contain" style={styles.image}>
           <Text style={styles.flipTextBack}></Text>
         </ImageBackground>
       </Animated.View>
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    height: 100,
+    height: '100%',
     width: '100%',
     justifyContent: "center"
   },
