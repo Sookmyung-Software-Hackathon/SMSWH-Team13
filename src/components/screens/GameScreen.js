@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { FlatList, View, StyleSheet, Alert } from 'react-native';
+import { SafeAreaView, FlatList, View, StyleSheet, Alert, Text, ImageBackground } from 'react-native';
 import FlippableCard from '../common/FlippableCard';
 
 import { startGame, selectItem } from '../../store/game';
@@ -8,6 +8,8 @@ import StaticCard from '../common/StaticCard';
 import PrimaryButton from '../common/PrimaryButton';
 import CounterText from '../common/CounterText';
 import ErrorScreen from './ErrorScreen';
+import TotalCardScreen from './TotalCardScreen';
+import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
 
 const GameScreen = () => {
   const dispatch = useDispatch();
@@ -27,10 +29,8 @@ const GameScreen = () => {
   const handleResetGame = () => Alert.alert('다시 시작하기', '다시 시작하시겠습니까? \n모든 데이터가 리셋됩니다.', [{ text: 'Yes', onPress: () => dispatch(startGame()) }, { text: 'No' }]);
 
   const showWonAlert = () => Alert.alert('축하합니다!', `송이는 ${totalSteps} 번만에 모든 눈송이 그림을 맞추었습니다!`,
-   [{ text: '다시 시작하기', onPress: () => dispatch(startGame()) },
-    {text:"공과대학 전공 전체보기", onPress: () =>{console.log("sfjoweif")}}
-  ]);
-  
+    [{ text: '다시 시작하기', onPress: () => dispatch(startGame()) }]);
+
   if (error) return <ErrorScreen />;
 
   if (won) showWonAlert();
@@ -42,6 +42,9 @@ const GameScreen = () => {
         <CounterText count={totalSteps} />
       </View>
       <FlatList keyExtractor={(item) => item.id} data={items} renderItem={({ item }) => renderCard(item)} numColumns={4} style={styles.flatList} />
+      <TouchableOpacity>
+      <ImageBackground source={{ uri: "https://i.ibb.co/WP5mwMM/noon-Song-Head.png" }} resizeMode="cover" style={styles.buttonStyle}/>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -62,6 +65,12 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   flatList: {
-    flex: 1,
+    flex: 10,
+  },
+  buttonStyle: {
+    marginBottom: 50,
+    marginLeft: '42%',
+    width: 50,
+    height: 50
   },
 });
