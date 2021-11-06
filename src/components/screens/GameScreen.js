@@ -24,9 +24,9 @@ const GameScreen = () => {
     return <FlippableCard hiddenValue={item.value} onTouch={handleTouch(item)} remainOpen={item.selected} />;
   };
 
-  const handleResetGame = () => Alert.alert('Reset Game', 'Are you sure? You will lose all your data.', [{ text: 'Yes', onPress: () => dispatch(startGame()) }, { text: 'No' }]);
+  const handleResetGame = () => Alert.alert('다시 시작하기', '다시 시작하시겠습니까? \n모든 데이터가 리셋됩니다.', [{ text: 'Yes', onPress: () => dispatch(startGame()) }, { text: 'No' }]);
 
-  const showWonAlert = () => Alert.alert('Congratulations!', `You win this game in ${totalSteps} Steps`, [{ text: 'Try Another Round', onPress: () => dispatch(startGame()) }]);
+  const showWonAlert = () => Alert.alert('축하합니다!', `송이는 ${totalSteps} 번만에 모든 눈송이 그림을 맞추었습니다!`, [{ text: '다시 시작하기', onPress: () => dispatch(startGame()) }]);
 
   if (error) return <ErrorScreen />;
 
