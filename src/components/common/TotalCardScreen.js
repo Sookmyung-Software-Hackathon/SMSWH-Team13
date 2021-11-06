@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     marginBottom: -10,
     justifyContent: 'flex-end',
   },
-  titleStyle: {
+  titleStyle: { 
     fontWeight: "bold",
     fontSize: 25,
     color: '#db5248',
