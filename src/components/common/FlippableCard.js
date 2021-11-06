@@ -1,10 +1,33 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ImageBackground, Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Animated, Dimensions, ImageBackground } from 'react-native';
+
+// const imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg"
+
 
 const MAX_HEIGHT = Dimensions.get('window').height;
 const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
   const animatedValue = useRef(new Animated.Value(0)).current;
   const [disabled, setDisabled] = useState(false);
+
+  let imageURI=""; 
+  switch(hiddenValue){
+    case 1: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg";
+      break;
+    case 2: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0301.jpg";
+      break;
+    case 3: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0302.jpg";
+      break;
+    case 4: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0303.jpg";
+      break;
+    case 5: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0304.jpg";
+      break;
+    case 6: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0306.jpg";
+      break;
+    case 7: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0307.jpg";
+      break;
+    case 8: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0308.jpg";
+      break;
+  }
 
   useEffect(() => {
     if (!remainOpen && animatedValue._value >= 90) {
@@ -60,9 +83,9 @@ const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
         <Text style={styles.flipTextFront}>?</Text>
       </Animated.View>
       <Animated.View style={[styles.flipCard, styles.flipCardBack, popoutAnimationStyle(), backAnimatedStyle()]}>
-      <ImageBackground source={{uri: 'https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg'}} resizeMode="cover" style={styles.image}>
-        <Text style={styles.flipTextBack}>{hiddenValue}</Text>
-      </ImageBackground>
+        <ImageBackground source={{uri: imageURI}} resizeMode="cover" style={styles.image}>
+          <Text style={styles.flipTextBack}></Text>
+        </ImageBackground>
       </Animated.View>
     </TouchableOpacity>
   );
@@ -87,7 +110,7 @@ const styles = StyleSheet.create({
     height: '100%',
     borderColor: 'white',
     borderWidth: 8,
-    backgroundColor: '#0047AB',
+    backgroundColor: '#0009C4',
     transform: [{ perspective: 2000 }],
     borderRadius: 20,
   },
@@ -102,7 +125,6 @@ const styles = StyleSheet.create({
   },
   flipTextBack: {
     fontSize: 40,
-    color: '#000',
     fontWeight: '600',
   },
   image : {

@@ -1,7 +1,7 @@
 const generateUniqueNum = (n) => {
   let arr = [];
   while (arr.length < n) {
-    const r = Math.floor(Math.random() * 100) + 1;
+    const r = Math.floor(Math.random() * 8) + 1;
     if (arr.indexOf(r) === -1) arr.push(r);
   }
   return arr;
