@@ -77,7 +77,11 @@ const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
   return (
     <TouchableOpacity onPress={flipCard} style={styles.container} disabled={disabled}>
       <Animated.View style={[styles.flipCard, styles.flipCardFront, popoutAnimationStyle(), frontAnimatedStyle()]}>
+<<<<<<< HEAD
         <ImageBackground source={{ uri: "https://www.sookmyung.ac.kr/sites/sookmyungkr/masterSkin/sookmyungkr_smuMain/images/common/f-logo.png" }} resizeMode="contain" style={styles.icon}>
+=======
+        <ImageBackground source={{ uri: "https://www.sookmyung.ac.kr/sites/sookmyungkr/masterSkin/sookmyungkr_smuMain/images/common/f-logo.png" }} resizeMode="cover" style={styles.icon}>
+>>>>>>> 452e42f5dc811596714e259f3b583555b137e8b7
           <Text style={styles.flipTextFront}></Text>
         </ImageBackground>
       </Animated.View>
@@ -129,7 +133,11 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+<<<<<<< HEAD
     height: 100,
+=======
+    height: '100%',
+>>>>>>> 452e42f5dc811596714e259f3b583555b137e8b7
     width: '100%',
     justifyContent: "center"
   },
