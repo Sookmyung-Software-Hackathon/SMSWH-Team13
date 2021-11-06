@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   flatList: {
-    flex: 10,
+    flex: 10, 
   },
   buttonStyle: {
     marginBottom: 50, 
