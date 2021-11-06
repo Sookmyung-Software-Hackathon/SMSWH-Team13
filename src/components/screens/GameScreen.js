@@ -38,7 +38,7 @@ const GameScreen = () => {
         <PrimaryButton onPress={handleResetGame} text="Reset Game" />
         <CounterText count={totalSteps} />
       </View>
-      <FlatList keyExtractor={(item) => item.id} data={items} renderItem={({ item }) => renderCard(item)} numColumns={3} style={styles.flatList} />
+      <FlatList keyExtractor={(item) => item.id} data={items} renderItem={({ item }) => renderCard(item)} numColumns={4} style={styles.flatList} />
     </View>
   );
 };
