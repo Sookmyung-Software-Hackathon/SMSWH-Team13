@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   gameScreen: {
     marginHorizontal: 10,
     flexGrow: 1,
+    marginTop: 50
   },
   headerContainer: {
     flexDirection: 'row',

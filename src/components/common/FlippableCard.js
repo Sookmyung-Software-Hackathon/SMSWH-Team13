@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import { ImageBackground, Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
 
 const MAX_HEIGHT = Dimensions.get('window').height;
 const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
@@ -60,7 +60,9 @@ const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
         <Text style={styles.flipTextFront}>?</Text>
       </Animated.View>
       <Animated.View style={[styles.flipCard, styles.flipCardBack, popoutAnimationStyle(), backAnimatedStyle()]}>
+      <ImageBackground source={{uri: 'https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg'}} resizeMode="cover" style={styles.image}>
         <Text style={styles.flipTextBack}>{hiddenValue}</Text>
+      </ImageBackground>
       </Animated.View>
     </TouchableOpacity>
   );
@@ -74,7 +76,8 @@ const styles = StyleSheet.create({
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    height: MAX_HEIGHT / 4.7,
+    height: MAX_HEIGHT / 7,
+    marginTop: 10
   },
   flipCard: {
     alignItems: 'center',
@@ -102,4 +105,10 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '600',
   },
+  image : {
+    flex: 1,
+    height: 100,
+    width: '100%',
+    justifyContent: "center"
+  }
 });
