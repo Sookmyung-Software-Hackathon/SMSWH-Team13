@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     height: '100%',
     borderColor: 'white',
     borderWidth: 8,
-    backgroundColor: '#0080FF',
+    backgroundColor: '#0047AB',
     transform: [{ perspective: 2000 }],
     borderRadius: 20,
   },

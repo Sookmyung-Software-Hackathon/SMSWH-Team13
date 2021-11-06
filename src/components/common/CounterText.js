@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
   },
   counterNumber: {
     fontSize: 24,
-    color: '#0080FF',
+    color: '#0009C4',
   },
 });

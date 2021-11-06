@@ -15,7 +15,7 @@ export default PrimaryButton;
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: '#24a0ed',
+    backgroundColor: '#0009C4',
     padding: 10,
     borderRadius: 10,
   },
