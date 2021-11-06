@@ -1,31 +1,28 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Text, StyleSheet, TouchableOpacity, Animated, Dimensions, ImageBackground } from 'react-native';
-
-// const imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg"
-
+import { Text, StyleSheet, TouchableOpacity, Animated, Dimensions, ImageBackground, Image } from 'react-native';
 
 const MAX_HEIGHT = Dimensions.get('window').height;
 const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
   const animatedValue = useRef(new Animated.Value(0)).current;
   const [disabled, setDisabled] = useState(false);
 
-  let imageURI=""; 
-  switch(hiddenValue){
-    case 1: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0305.jpg";
+  let imageURI = "";
+  switch (hiddenValue) {
+    case 1: imageURI = "https://i.ibb.co/m6FKk7V/college-mascot-0301.jpg";
       break;
-    case 2: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0301.jpg";
+    case 2: imageURI = "https://i.ibb.co/bmcgjcv/college-mascot-0302.jpg";
       break;
-    case 3: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0302.jpg";
+    case 3: imageURI = "https://i.ibb.co/PhRx97D/college-mascot-0303.jpg";
       break;
-    case 4: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0303.jpg";
+    case 4: imageURI = "https://i.ibb.co/mR0bJHD/college-mascot-0304.jpg";
       break;
-    case 5: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0304.jpg";
+    case 5: imageURI = "https://i.ibb.co/wzVJwcv/college-mascot-0305.jpg";
       break;
-    case 6: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0306.jpg";
+    case 6: imageURI = "https://i.ibb.co/yVbNyhc/college-mascot-0306.jpg";
       break;
-    case 7: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0307.jpg";
+    case 7: imageURI = "https://i.ibb.co/MkpFb7D/college-mascot-0307.jpg";
       break;
-    case 8: imageURI="https://www.sookmyung.ac.kr/sites/sookmyungkr/images/sub/contents/college_mascot_0308.jpg";
+    case 8: imageURI = "https://i.ibb.co/fxv53Mg/college-mascot-0308.jpg";
       break;
   }
 
@@ -80,10 +77,13 @@ const FlippableCard = ({ hiddenValue, onTouch, remainOpen = false }) => {
   return (
     <TouchableOpacity onPress={flipCard} style={styles.container} disabled={disabled}>
       <Animated.View style={[styles.flipCard, styles.flipCardFront, popoutAnimationStyle(), frontAnimatedStyle()]}>
-        <Text style={styles.flipTextFront}>?</Text>
+        <ImageBackground source={{ uri: "https://www.sookmyung.ac.kr/sites/sookmyungkr/masterSkin/sookmyungkr_smuMain/images/common/f-logo.png" }} resizeMode="cover" style={styles.icon}>
+          <Text style={styles.flipTextFront}></Text>
+        </ImageBackground>
       </Animated.View>
+
       <Animated.View style={[styles.flipCard, styles.flipCardBack, popoutAnimationStyle(), backAnimatedStyle()]}>
-        <ImageBackground source={{uri: imageURI}} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={{ uri: imageURI }} resizeMode="cover" style={styles.image}>
           <Text style={styles.flipTextBack}></Text>
         </ImageBackground>
       </Animated.View>
@@ -127,10 +127,17 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
   },
-  image : {
+  image: {
     flex: 1,
     height: 100,
     width: '100%',
+    justifyContent: "center"
+  },
+  icon: {
+    flex: 1,
+    marginTop: 30,
+    height: 40,
+    width: 30,
     justifyContent: "center"
   }
 });
