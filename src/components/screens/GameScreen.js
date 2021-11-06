@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     marginBottom: 50, 
     marginLeft: '42%',
     width: 50,
-    height: 50 
+    height: 50
   },
 }); 

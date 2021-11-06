@@ -15,7 +15,7 @@ const store = configureStore();
 export default function App(){
   return(
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer styles={{fontFamily: 'IM_Hyemin-Bold.ttf'}}>
         <Stack.Navigator initialRouteName="Game">
           <Stack.Screen name="눈송이 카드 맞추기 게임" component={GameScreen}>
           </Stack.Screen>
@@ -31,5 +31,6 @@ const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: 'rgba(211, 211, 211, 0.9)',
     flex: 1,
+    fontFamily: 'IM_Hyemin-Regular.ttf'
   },
 });
