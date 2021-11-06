@@ -17,7 +17,7 @@ export default function TotalCardScreen() {
           </View>
           <Text style={styles.mainTextStyle}>최첨단 융합 기술의 중심, {'\n'}화공생명공학 분야의 미래 지향적 여성 리더{'\n'}</Text>
           <Text>화공생명공학은 자연과학과 공학적 지식에 기반한 대표적 융합 학문입니다. 화학·전자소재·에너지공정의 설계/분석/제어와 함께 분자 수준의 미세공학적 접근이 요구되는 차세대 첨단소재, 신재생에너지, 이차전지, 질병진단 및 인공생명체, 복합용도 화장품 등의 분야를 아우릅니다. 특히 미래지향적 분야에 초점을 맞추어 실용적이고도 산업친화적인 연구와 전인적·여성친화적인 공학교육을 수행합니다.</Text>
-        </View>
+        </View>   
         <View style={styles.viewStyle}>
           <View style={styles.horizontalViewStyle}>
             <View style={styles.VerticalViewStyle}>
