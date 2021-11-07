@@ -10,7 +10,6 @@ import TaroCardScreen from './src/components/common/TaroCardScreen';
 import * as SplashScreen from 'expo-splash-screen';
 
 
-
 const Stack = createStackNavigator();
  
 const store = configureStore();
@@ -70,7 +69,7 @@ export default function App(){
   delay_splash();
   return(
     <Provider store={store}>
-      <NavigationContainer styles={{fontFamily: 'IM_Hyemin-Bold.ttf'}}>
+      <NavigationContainer>
         <Stack.Navigator initialRouteName="Game">
           <Stack.Screen name="눈송이 카드 맞추기 게임" component={GameScreen}>
           </Stack.Screen>
