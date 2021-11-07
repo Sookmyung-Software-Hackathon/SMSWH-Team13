@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-card-flip-game",
-    "slug": "native-card-flip-game",
+    "name": "카드캡터송이",
+    "slug": "NoonsongCardGame",
     "platforms": [
       "ios",
       "android",
@@ -22,7 +22,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cardCaptureSong.NoonsongCardGame",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.cardCaptureSong.NoonsongCardGame",
+      "versionCode": 1
     }
   } 
 }

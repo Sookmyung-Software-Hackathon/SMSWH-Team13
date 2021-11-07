@@ -168,28 +168,28 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   pictureStyle: {
-    width: 90,
-    height: 100,
+    width: 75,
+    height: 80,
     marginBottom: -10,
     justifyContent: 'flex-end',
   },
   titleStyle: {
-    fontWeight: "bold",
-    fontSize: 25,
+    fontSize: 15,
     color: '#db5248',
-    fontFamily: 'IM_Hyemin-Bold'
+    fontFamily: 'IM_Hyemin-Bold',
   },
   subtitleStyle: {
-    fontSize: 12,
+    fontSize: 8,
     color: '#db5248',
     marginTop: 5,
     fontFamily: 'IM_Hyemin-Bold'
   },
   mainTextStyle: {
-    fontWeight: 'bold',
-    fontFamily: 'IM_Hyemin-Bold'
+    fontSize: 12,
+    fontFamily: 'IM_Hyemin-Bold',
   },
   mainTextStyle02: {
+    fontSize: 11,
     fontFamily: 'IM_Hyemin-Regular'
   },
   tarotButtonStyle: {

@@ -27,12 +27,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#0009C4',
     padding: 10,
     borderRadius: 10,
-    fontFamily: 'IM_Hyemin-Bold'
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '700',
-    fontFamily: 'IM_Hyemin-Bold'
+    fontFamily: 'IM_Hyemin-Bold',
   },
 });
