@@ -6,12 +6,13 @@ import { StyleSheet, SafeAreaView, Image ,Button,Text,View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TotalCardScreen from  './src/components/common/TotalCardScreen';
+import TaroCardScreen from './src/components/common/TaroCardScreen';
 import * as SplashScreen from 'expo-splash-screen';
 
 
 
 const Stack = createStackNavigator();
-
+ 
 const store = configureStore();
 
 function sleep (ms) {
@@ -75,16 +76,17 @@ export default function App(){
           </Stack.Screen>
           <Stack.Screen name="공대 학과 전체 보기" component={TotalCardScreen}>
           </Stack.Screen>
+          <Stack.Screen name="오늘의 운세" component={TaroCardScreen}>
+          </Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
   )
 }
-
+  
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: 'rgba(211, 211, 211, 0.9)',
-    flex: 1,
-    fontFamily: 'IM_Hyemin-Regular.ttf'
+    flex: 1
   },
 });

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ImageBackground, SafeAreaView, ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function TotalCardScreen() {
+export default function TotalCardScreen({navigation}) {
   return (
     <ScrollView>
       <SafeAreaView style={{ justifyContent: 'space-around', alignItems: 'center' }}>
@@ -116,7 +116,7 @@ export default function TotalCardScreen() {
         </View>
         <View style={styles.tarotButtonStyle}>
           <ImageBackground source={{ uri: "https://i.ibb.co/L1HSHZm/twinkle-Song.png" }} resizeMode="cover" style={styles.twinkleSongStyle} />
-          <TouchableOpacity >
+          <TouchableOpacity onPress={()=> navigation.navigate("오늘의 운세")}>
             <Text style={styles.WoonseTextStyle}>오늘의 운세 보기</Text>
           </TouchableOpacity>
           <ImageBackground source={{ uri: "https://i.ibb.co/L1HSHZm/twinkle-Song.png" }} resizeMode="cover" style={styles.twinkleSongStyle} />
@@ -178,6 +178,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 200,
     height: 50,
+    justifyContent: 'space-around'
   },
   twinkleSongStyle: {
     width: 50,
