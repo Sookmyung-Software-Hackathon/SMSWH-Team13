@@ -28,7 +28,7 @@ const GameScreen = ({navigation}) => {
 
   const handleResetGame = () => Alert.alert('다시 시작하기', '다시 시작하시겠습니까? \n모든 데이터가 리셋됩니다.', [{ text: 'Yes', onPress: () => dispatch(startGame()) }, { text: 'No' }]);
 
-  const showWonAlert = () => Alert.alert('축하합니다!', `송이는 ${totalSteps} 번만에 모든 눈송이 그림을 맞추었습니다!\n눈송이를 눌러서 전체 공대 과들을 살펴보세요~!`,
+  const showWonAlert = () => Alert.alert('축하합니다!', `송이는 ${totalSteps} 번만에 모든 \n눈송이 그림을 맞추었습니다!\n\n눈송이를 눌러서 \n전체 공대 전공들을 살펴보세요~!`,
     [{ text: '확인', onPress: () => dispatch(startGame()) }
   ]);
 
