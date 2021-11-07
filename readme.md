@@ -1,7 +1,7 @@
 # ✨카드캡터송이✨
 - 구성원 : __조윤진(1911909), 박의서(1915642)__
 - 분야 : 앱 (App)
-- __산출물 주소__ (apk) : https://drive.google.com/file/d/1ALfxASe2j5QXqvmLlnuhocwFstO60Npg/view?ts=6187da09
+- __산출물(.apk) 주소__ : https://drive.google.com/file/d/1ALfxASe2j5QXqvmLlnuhocwFstO60Npg/view?ts=6187da09
 
 ## 💙 카드캡터송이는 어떤 App인가
 ![icon](https://user-images.githubusercontent.com/70744494/140643732-fa94613b-5840-45b1-8099-7a34a895414b.png)
