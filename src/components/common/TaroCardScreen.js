@@ -9,14 +9,18 @@ export default function TaroCardScreen() {
                 <Text style={styles.text}>오늘의 운세를 확인해보세요!</Text>
             </View>
             <View style={styles.flipCardViewStyle}>
-                <FlipCard>
+                <FlipCard> 
                     {/* Face Side */}
                     <View style={styles.face}>
-                    <ImageBackground source={{ uri: "https://i.ibb.co/xhcwvJ8/Face.jpg" }} resizeMode="cover" style={styles.songFace} />
+                    <ImageBackground source={{ uri: "https://i.ibb.co/61ZZvNg/face02.jpg" }} resizeMode="cover" style={styles.songFace} />
                     </View>
                     {/* Back Side */}
                     <View style={styles.back}>
-                        <Text>The Back</Text>
+                        <ImageBackground source={{ uri: "https://i.ibb.co/Jk6XHrf/image.png" }} resizeMode="stretch" style={styles.imgBG}>
+                            <View style={styles.in}>
+                                <Text style={styles.title}>심판 카드</Text>
+                            </View>
+                        </ImageBackground>
                     </View>
                 </FlipCard>
             </View>
@@ -33,6 +37,12 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: 'white',
         textAlign: 'center'
+    },
+    title:{
+        fontSize: 30,
+        color: 'black',
+        textAlign:'center',
+        opacity:1
     },
     view: {
         backgroundColor: 'skyblue',
@@ -54,7 +64,7 @@ const styles = StyleSheet.create({
         height: 550,
         borderColor: 'white',
         borderWidth: 10,
-        backgroundColor: '#263672',
+        backgroundColor: '#2c439b',
         borderRadius: 20,
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#595959',
@@ -82,5 +92,12 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 250,
         marginTop: 125
-    }
+    },
+    imgBG:{
+        width: 260,
+        height: 510,
+        borderColor: 'white',
+        borderWidth: 10,
+        opacity:0.3
+    },
 });
