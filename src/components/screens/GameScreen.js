@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SafeAreaView, FlatList, View, StyleSheet, Alert, Text, ImageBackground } from 'react-native';
 import FlippableCard from '../common/FlippableCard';
@@ -11,15 +11,19 @@ import ErrorScreen from './ErrorScreen';
 import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
 import * as Font from 'expo-font';
 
-const getFonts = () => {
-  return Font.loadAsync({
-    'IM_Hyemin-Regular': require('../../../assets/fonts/IM_Hyemin-Regular.ttf'),
-    'IM_Hyemin-Bold': require('../../../assets/fonts/IM_Hyemin-Bold.ttf')
-  })
-}
+
 
 
 const GameScreen = ({ navigation }) => {
+  const [fontLoaded, setFontLoaded] = useState(false);
+    useEffect(async () => {
+        await Font.loadAsync({
+            'IM_Hyemin-Regular': require('../../../assets/fonts/IM_Hyemin-Regular.ttf'),
+            'IM_Hyemin-Bold': require('../../../assets/fonts/IM_Hyemin-Bold.ttf')
+
+        });
+        setFontLoaded(true);
+    }, []);
   const dispatch = useDispatch();
   const { data: items, totalSteps, won, error } = useSelector((state) => state.game);
 
@@ -45,6 +49,7 @@ const GameScreen = ({ navigation }) => {
   if (won) showWonAlert();
 
   return (
+    
     <View style={styles.gameScreen}>
       <View style={styles.headerContainer}>
         <PrimaryButton onPress={handleResetGame} text="Reset Game" />

@@ -124,12 +124,6 @@ const styles = StyleSheet.create({
         marginTop: 30,
         padding: 10,
     },
-    card: {
-        backgroundColor: 'orange'
-    },
-    cardContainer: {
-        backgroundColor: 'red'
-    },
     face: {
         width: 300,
         height: 550,

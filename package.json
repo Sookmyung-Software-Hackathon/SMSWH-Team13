@@ -6,7 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
@@ -16,6 +17,7 @@
     "axios": "^0.24.0",
     "expo": "^43.0.0",
     "expo-splash-screen": "~0.13.5",
+    "patch-package": "^6.4.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.2",
